@@ -16,7 +16,7 @@ try:
 				zip_ref.close() # close file
 				print(file_name_path, " file unzipping completed")
 except Exception as e:
-	if hasaatr(e,'message'):
+	if hasattr(e,'message'):
 		print(e.message)
 	else:
 		print(e)
