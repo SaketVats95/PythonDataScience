@@ -48,7 +48,7 @@ if __name__ == "__main__":
 	k = 4
 	
 	startTime=time.time()
-	printAllKLength(getListOfAllChars(97,122), k) 
+	printAllKLength(getListOfAllChars(97,100), k) 
 	print("---{} seconds --- for Completing All Possible {} letters".format((time.time()-startTime),k))
 	#print("\nSecond Test") 
 	#set2 = ['a', 'b', 'c', 'd'] 
