@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     jobs = []
     for i in range(startingStrLength, endingStrLength + 1):
-        thread = threading.Thread(target=printAllKLength, args=(getListOfAllChars(97, 122), i,i,))
+        thread = threading.Thread(target=printAllKLength, args=(getListOfAllChars(32, 122), i,i,))
         jobs.append(thread)
         # print("All ",i," String Completed")
         # f.close()
