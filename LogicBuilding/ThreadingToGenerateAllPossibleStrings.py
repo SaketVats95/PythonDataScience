@@ -12,14 +12,11 @@ def printAllKLength(set, k,s):
     printAllKLengthRec(set, "", n, k,s)
 
 
-# The main recursive method
-# to print all possible
-# strings of length k
 def printAllKLengthRec(set, prefix, n, k,s):
     if (k == 0):
         print(prefix)
         f = open("C:\\Saket Vats\\PythonDS\\allPossible"+str(s)+'.txt', 'a+')
-        f.write(prefix+',')
+        f.write(prefix+'\n')
         f.close()
         return
 
@@ -31,20 +28,17 @@ def printAllKLengthRec(set, prefix, n, k,s):
 
 if __name__ == "__main__":
     startingStrLength = 8
-    endingStrLength = 10
-
+    endingStrLength = 20
     jobs = []
     for i in range(startingStrLength, endingStrLength + 1):
-        thread = threading.Thread(target=printAllKLength, args=(getListOfAllChars(32, 122), i,i,))
+        thread = threading.Thread(target=printAllKLength, args=(getListOfAllChars(33,122), i,i,))
         jobs.append(thread)
-        # print("All ",i," String Completed")
-        # f.close()
 
     for i in jobs:
         i.start()
     for i in jobs:
         i.join()
-
+    print(getListOfAllChars(33, 122))
     print("All Length All Possible String Completed")
 
 
